@@ -1,0 +1,2 @@
+1 . create .env file in the main path .
+2 . and add this command REACT_APP_API_KEY=<movie api key> . example REACT_APP_API_KEY=1dhcaj345n5b6b53j3b2
