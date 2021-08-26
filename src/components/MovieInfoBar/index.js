@@ -1,7 +1,7 @@
 import React from 'react'
 import { Wraper, Box , Content} from './MovieInfoBar'
 import {calcTime,convertMoney} from '../../helpers'
-
+import PropTypes from 'prop-types'
 
 const MovieInfoBar = ({movie}) => {
 
@@ -23,6 +23,15 @@ const MovieInfoBar = ({movie}) => {
             </Content>
         </Wraper>
     )
+}
+
+MovieInfoBar.propTypes = {
+    Movie:PropTypes.object
+}
+
+DataView.propTypes = {
+    title: PropTypes.string,
+    
 }
 
 export default MovieInfoBar

@@ -2,7 +2,8 @@ import React from 'react'
 import { Wrapper, Content, LogoImg, TMDBLogoImg } from './Header.styles'
 import RNDBLogo from '../../images/react-movie-logo.svg'
 import TMDBLogo from '../../images/tmdb_logo.svg'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+
 
 const Header = () => {
     return (
@@ -17,5 +18,7 @@ const Header = () => {
         </Wrapper>
     )
 }
+
+
 
 export default Header

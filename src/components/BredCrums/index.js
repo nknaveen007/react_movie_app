@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import {Wraper,Content} from './BredCrums.styles'
+import { Wraper, Content } from './BredCrums.styles'
+import PropTypes from 'prop-types'
 
 
 const BreadCrums = ({movieTitle}) => {
@@ -15,6 +16,10 @@ const BreadCrums = ({movieTitle}) => {
             </Content>
         </Wraper>
     )
+}
+
+BreadCrums.propTypes = {
+    movieTitle:PropTypes.string
 }
 
 export default BreadCrums

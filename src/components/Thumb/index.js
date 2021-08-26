@@ -1,6 +1,7 @@
 import React from 'react'
 import { Image } from './Thumb.styles'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import PropsTypes from 'prop-types'
 
 const Thumb = ({ image, movieid, clickable  }) => {
     
@@ -16,4 +17,9 @@ const Thumb = ({ image, movieid, clickable  }) => {
     )
 }
 
+Thumb.propTypes = {
+    image: PropsTypes.string,
+    movieid: PropsTypes.number,
+    clickable:PropsTypes.bool   
+}
 export default Thumb

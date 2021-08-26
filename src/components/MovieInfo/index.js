@@ -3,12 +3,13 @@ import { IMAGE_BASE_URL,BACKDROP_SIZE } from '../../config'
 import Thumb from '../Thumb'
 import { Wraper, Content, Text } from './MovieInfo.styles'
 import NoImage from '../../images/no_image.jpg'
+import PropTypes from 'prop-types'
 
 const MovieInfo = ({movie}) => {
     return (
         <Wraper backdrop={movie.backdrop_path}>
             <Content>
-                <Thumb image={movie.backdrop_path ? `${IMAGE_BASE_URL}${BACKDROP_SIZE}${movie.backdrop_path}` : NoImage} movieid={movie.id} clickable={ false}/>
+                <Thumb  image={movie.backdrop_path ? `${IMAGE_BASE_URL}${BACKDROP_SIZE}${movie.backdrop_path}` : NoImage} movieid={movie.id} clickable={ false}/>
                 <Text>
                     <h1>{movie.title}</h1>
                     <h3>PLOT</h3>
@@ -33,6 +34,10 @@ const MovieInfo = ({movie}) => {
             </Content>
         </Wraper>
     )
+}
+
+MovieInfo.propTypes = {
+    movie:PropTypes.object
 }
 
 export default MovieInfo

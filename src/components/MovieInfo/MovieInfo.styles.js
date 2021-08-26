@@ -18,8 +18,14 @@ export const Content = styled.div`
    background-color: rgb(0,0,0,0.7);
    border-radius: 20px;
    padding: 0;
-   
-   
+   animation: cont 0.7s ease-in-out 1 ;
+  
+   @keyframes cont{
+       0%{transform:translateX(3000px)}
+      100%{transform:translateX(0px)}
+   }
+  
+
 
    @media (max-width:1000px){
     flex-wrap: wrap;
@@ -31,10 +37,20 @@ export const Content = styled.div`
 `
 
 export const Text = styled.div`
-   max-width: 850px;
+   max-width: 950px;
    padding: 20px 40px;
    color: var(--white);
    font-size: var(--fontMed);
+   animation: textview 1.2s ease-out 1 ;
+  
+   
+
+   @keyframes textview{
+    0% {opacity:0}
+    75%{opacity:0}
+    100%{opacity:1}
+   }
+
    @media (max-width:768px){
     font-size: var(--fontSmall);
    }
